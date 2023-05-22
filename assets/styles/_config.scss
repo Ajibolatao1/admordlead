@@ -12,13 +12,25 @@ html {
 }
 
 $pri-color: rgba(199, 51, 54, 255);
+$pri-color-hover: rgb(158, 37, 39);
 
 // classes
 .active {
   color: $pri-color !important;
 }
-.pri__color{
-   color: $pri-color !important;
+.pri__color {
+  color: $pri-color !important;
+}
+
+.btn-pri-color {
+  background-color: $pri-color !important;
+  color: white !important;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    // background-color: white !important;
+    background-color: $pri-color-hover !important;
+  }
 }
 
 // media queries
@@ -55,12 +67,9 @@ $large: 1200px;
 // animation
 @keyframes expand {
   0% {
-    
-   }
-   50% {
-      
-   }
-   100% {
-      
+  }
+  50% {
+  }
+  100% {
   }
 }

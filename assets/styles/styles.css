@@ -17,6 +17,15 @@ html {
   color: rgb(199, 51, 54) !important;
 }
 
+.btn-pri-color {
+  background-color: rgb(199, 51, 54) !important;
+  color: white !important;
+  transition: all 0.5s ease-in-out;
+}
+.btn-pri-color:hover {
+  background-color: rgb(158, 37, 39) !important;
+}
+
 @keyframes expand {}
 body {
   font-family: "Poppins", sans-serif !important;
@@ -69,6 +78,9 @@ body .header .right .hamburger__box .hamburger:hover {
     display: none;
   }
 }
+body .section {
+  min-height: 400px;
+}
 body .section__1 {
   position: relative;
   height: 400px;
@@ -92,6 +104,47 @@ body .section__1 .desc {
   max-width: 700px;
 }
 body .section__2 {
-  height: 800px;
-  background-color: aquamarine;
+  background-image: linear-gradient(to bottom right, white, rgb(199, 51, 54));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+  gap: 3rem;
+}
+body .section__2 .desc {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  body .section__2 {
+    flex-direction: row;
+  }
+}
+body .section__3 {
+  background-color: rgb(235, 233, 233);
+}
+body .section__3 .cards {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+body .section__3 .cards .card {
+  max-width: 400px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+body .section__3 .cards .card .icon {
+  font-size: 2rem;
+  color: rgb(199, 51, 54);
 }/*# sourceMappingURL=styles.css.map */

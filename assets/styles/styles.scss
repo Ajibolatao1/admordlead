@@ -3,7 +3,7 @@
 
 body {
   font-family: "Poppins", sans-serif !important;
-//   position: relative;
+  //   position: relative;
 
   //   header
   .header {
@@ -69,13 +69,18 @@ body {
     }
   }
 
+  // section
+  .section {
+    min-height: 400px;
+  }
+
   //   section 1
   .section__1 {
     position: relative;
     height: 400px;
-    background-color: rgba(0, 0, 0, .5);
-   //  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-   //    url("../images/2.webp") no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    //  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    //    url("../images/2.webp") no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +104,60 @@ body {
 
   //   section 2
   .section__2 {
-    height: 800px;
-    background-color: aquamarine;
+    background-image: linear-gradient(
+      to bottom right,
+      white,
+      rgba(199, 51, 54, 100)
+    );
+    // min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+    gap: 3rem;
+
+    .desc {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 700px;
+      padding: 1rem;
+    }
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  // section 3
+  .section__3 {
+    background-color: rgb(235, 233, 233);
+
+    .cards {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1200px;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      // background: #000;
+
+      .card {
+        max-width: 400px;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        .icon {
+          font-size: 2rem;
+          color: $pri-color;
+        }
+      }
+    }
   }
 }
