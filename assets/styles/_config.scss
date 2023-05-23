@@ -33,6 +33,10 @@ $pri-color-hover: rgb(158, 37, 39);
   }
 }
 
+.hide__bar {
+  width: 0 !important;
+}
+
 // media queries
 $mobile: 576px;
 $tablet: 768px;
