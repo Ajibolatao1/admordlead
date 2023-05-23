@@ -2,10 +2,10 @@ const section1El = document.querySelector(".section__1");
 
 const homeBtn = document.querySelector(".homeBtn");
 const publishersBtn = document.querySelector(".publishersBtn");
-const advertisersBtn = document.querySelector(".advertisersBtn");
+// const advertisersBtn = document.querySelector(".advertisersBtn");
 const aboutBtn = document.querySelector(".aboutBtn");
 const servicesBtn = document.querySelector(".servicesBtn");
-const contactBtn = document.querySelector(".contactBtn");
+// const contactBtn = document.querySelector(".contactBtn");
 const hamburgerBtn = document.querySelector(".hamburger");
 const sidebarEl = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close__bar");
@@ -29,13 +29,32 @@ window.onload = function () {
 // checkScrollHeight();
 
 // print current height after scrolling
-// window.addEventListener("scroll", function () {
-//   if (window.pageYOffset >= 508.5) {
-//     console.log(window.pageYOffset);
-//     homeBtn.classList.remove("active");
-//     publishersBtn.classList.add("active");
-//   }
-// });
+window.addEventListener("scroll", function () {
+  // For mobile
+  if (window.innerWidth <= 767) {
+  }
+
+  // for tablet
+  else {
+    if (window.pageYOffset <= 500) {
+      removeAllActiveClass();
+      homeBtn.classList.add("active");
+      // publishersBtn.classList.remove("active");
+    } 
+    if (window.pageYOffset >= 500) {
+      removeAllActiveClass();
+      publishersBtn.classList.add("active");
+    }
+    if (window.pageYOffset >= 1000) {
+      removeAllActiveClass();
+      servicesBtn.classList.add("active");
+    }
+    if (window.pageYOffset >=  2500) {
+      removeAllActiveClass();
+      aboutBtn.classList.add("active");
+    }
+  }
+});
 
 // hamburger menu
 hamburgerBtn.addEventListener("click", function () {
@@ -61,3 +80,14 @@ window.addEventListener("resize", function () {
     sidebarEl.classList.add("hide__bar");
   }
 });
+
+
+// function remove all active class
+function removeAllActiveClass() {
+  homeBtn.classList.remove("active");
+  publishersBtn.classList.remove("active");
+  // advertisersBtn.classList.remove("active");
+  aboutBtn.classList.remove("active");
+  servicesBtn.classList.remove("active");
+  // contactBtn.classList.remove("active");
+}

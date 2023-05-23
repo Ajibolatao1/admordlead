@@ -20,7 +20,7 @@ html {
 .btn-pri-color {
   background-color: rgb(199, 51, 54) !important;
   color: white !important;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .btn-pri-color:hover {
   background-color: rgb(158, 37, 39) !important;
@@ -31,10 +31,11 @@ html {
 }
 
 @keyframes expand {}
-body {
+body.index {
   font-family: "Poppins", sans-serif !important;
+  line-height: 2 !important;
 }
-body .header {
+body.index .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,46 +44,46 @@ body .header {
   z-index: 2;
   background-color: rgb(250, 250, 250);
 }
-body .header .left .logo {
+body.index .header .left .logo {
   width: 200px;
 }
-body .header .right .menu {
+body.index .header .right .menu {
   display: none;
 }
-body .header .right .hamburger__box .hamburger {
+body.index .header .right .hamburger__box .hamburger {
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   color: rgb(199, 51, 54);
   font-weight: 700;
 }
-body .header .right .hamburger__box .hamburger:hover {
+body.index .header .right .hamburger__box .hamburger:hover {
   font-size: 3rem;
   margin-right: -0.5rem;
 }
 @media (min-width: 768px) {
-  body .header {
+  body.index .header {
     padding: 1rem 4rem !important;
   }
-  body .header .right .menu {
+  body.index .header .right .menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 1rem;
   }
-  body .header .right .menu li a {
+  body.index .header .right .menu li a {
     text-decoration: none;
     color: black;
     transition: all 0.5s ease-in-out;
   }
-  body .header .right .menu li a:hover {
+  body.index .header .right .menu li a:hover {
     color: rgb(199, 51, 54);
   }
-  body .header .right .hamburger {
+  body.index .header .right .hamburger {
     display: none;
   }
 }
-body .sidebar {
+body.index .sidebar {
   position: fixed;
   height: 100vh;
   width: 250px;
@@ -95,13 +96,13 @@ body .sidebar {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
-body .sidebar .top {
+body.index .sidebar .top {
   height: 130px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-body .sidebar .top .bi {
+body.index .sidebar .top .bi {
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -109,18 +110,18 @@ body .sidebar .top .bi {
   font-weight: 700;
   padding-right: 1rem;
 }
-body .sidebar .top .bi:hover {
+body.index .sidebar .top .bi:hover {
   font-size: 3rem;
   margin-right: -0.5rem;
 }
-body .sidebar .bottom {
+body.index .sidebar .bottom {
   justify-self: center;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .sidebar .bottom .menu {
+body.index .sidebar .bottom .menu {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -128,21 +129,21 @@ body .sidebar .bottom .menu {
   font-size: 1.5rem;
   width: 100%;
 }
-body .sidebar .bottom .menu li a {
+body.index .sidebar .bottom .menu li a {
   width: 100%;
   display: block;
   text-decoration: none;
   color: rgb(199, 51, 54);
   transition: all 0.5s ease-in-out;
 }
-body .sidebar .bottom .menu li a:hover {
+body.index .sidebar .bottom .menu li a:hover {
   color: rgb(158, 37, 39);
   padding-left: 0.3rem;
 }
-body .section {
+body.index .section {
   min-height: 400px;
 }
-body .section__1 {
+body.index .section__1 {
   position: relative;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -155,16 +156,16 @@ body .section__1 {
   text-align: center;
   color: white;
 }
-body .section__1 .name {
+body.index .section__1 .name {
   font-size: 3rem;
   font-weight: 700;
 }
-body .section__1 .desc {
+body.index .section__1 .desc {
   width: 80%;
   margin: 0 auto;
   max-width: 700px;
 }
-body .section__2 {
+body.index .section__2 {
   background-image: linear-gradient(to bottom right, white, rgba(221, 77, 79, 0.76));
   display: flex;
   flex-direction: column;
@@ -174,21 +175,21 @@ body .section__2 {
   text-align: center;
   gap: 3rem;
 }
-body .section__2 .desc {
+body.index .section__2 .desc {
   width: 80%;
   margin: 0 auto;
   max-width: 700px;
   padding: 1rem;
 }
 @media (min-width: 768px) {
-  body .section__2 {
+  body.index .section__2 {
     flex-direction: row;
   }
 }
-body .section__3 {
+body.index .section__3 {
   background-color: rgb(235, 233, 233);
 }
-body .section__3 .cards {
+body.index .section__3 .cards {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
@@ -199,107 +200,114 @@ body .section__3 .cards {
   gap: 2rem;
   padding: 2rem 1rem;
 }
-body .section__3 .cards .card {
+body.index .section__3 .cards .card {
   max-width: 400px;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all 0.5s ease-in-out;
+  min-height: 250px;
 }
-body .section__3 .cards .card .icon {
+body.index .section__3 .cards .card .icon {
   font-size: 2rem;
   color: rgb(199, 51, 54);
 }
-body .section__3 .cards .card:hover {
+body.index .section__3 .cards .card:hover {
   transform: scale(1.03);
 }
-body .section__4 {
+body.index .section__4 {
   background-image: linear-gradient(to bottom right, white, rgba(221, 77, 79, 0.76));
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .section__4 .section__4__box {
+body.index .section__4 .section__4__box {
   width: 80%;
   max-width: 700px;
   padding: 2rem 0;
 }
-body .section__4 .section__4__box .title {
+body.index .section__4 .section__4__box .title {
   text-align: center;
   padding: 1rem;
   font-size: 1.7rem;
 }
-body .section__4 .section__4__box .sub__title {
+body.index .section__4 .section__4__box .sub__title {
   text-align: center;
   font-size: 1.2rem;
 }
-body .section__4 .bottom {
+body.index .section__4 .bottom {
   text-align: center;
 }
-body .section__5 {
+body.index .section__5 {
   background-color: rgb(235, 233, 233);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .section__5 .section__5__box .title {
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.7rem;
-}
-body .section__5 .section__5__box .desc__box {
-  width: 90%;
-  margin: 0 auto;
-}
-body .section__5 .section__5__box .desc__box .desc {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-body .section__5 .section__5__box .desc__box .desc .icon {
-  font-size: 2.5rem;
-  color: rgb(199, 51, 54);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .section__6 {
-  background-image: linear-gradient(to bottom right, white, rgba(221, 77, 79, 0.76));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .section__6 .section__6__box {
+body.index .section__5 .section__5__box {
   width: 90%;
   max-width: 1100px;
   padding: 2rem 0;
 }
-body .section__6 .section__6__box .title {
+body.index .section__5 .section__5__box .title {
   text-align: center;
   padding: 1rem;
   font-size: 1.7rem;
 }
-body .section__6 .section__6__box .desc__box {
+body.index .section__5 .section__5__box .desc__box {
   display: flex;
   flex-wrap: wrap;
   gap: 1.3rem;
   justify-content: center;
   align-items: center;
 }
-body .section__6 .section__6__box .desc__box .desc {
+body.index .section__5 .section__5__box .desc__box .desc {
   display: flex;
   gap: 1rem;
   max-width: 500px;
+  min-height: 200px;
 }
-body .section__6 .section__6__box .desc__box .desc .left {
+body.index .section__5 .section__5__box .desc__box .desc .left {
   font-size: 2.5rem;
   color: rgb(199, 51, 54);
 }
-body .section__6 .section__6__box .desc__box .desc .right .top {
+body.index .section__5 .section__5__box .desc__box .desc .right .top {
   font-size: 1.3rem;
   padding-bottom: 0.5rem;
 }
-body .footer {
+body.index .section__6 {
+  background-image: linear-gradient(to bottom right, white, rgba(221, 77, 79, 0.76));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.index .section__6 .section__6__box {
+  width: 80%;
+  max-width: 700px;
+  padding: 2rem 0;
+}
+body.index .section__6 .section__6__box .title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+body.index .section__6 .section__6__box .desc__box {
+  width: 90%;
+  margin: 0 auto;
+}
+body.index .section__6 .section__6__box .desc__box .desc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body.index .section__6 .section__6__box .desc__box .desc .icon {
+  font-size: 2.5rem;
+  color: rgb(199, 51, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.index .footer {
   background-color: rgb(250, 250, 250);
   display: flex;
   flex-direction: column;
@@ -308,11 +316,111 @@ body .footer {
   gap: 0.5rem;
   padding: 1rem;
 }
-body .footer .footer__link {
+body.index .footer .footer__link {
   text-decoration: none;
   color: rgb(199, 51, 54);
   transition: all 0.3s ease-in-out;
 }
-body .footer .footer__link:hover {
+body.index .footer .footer__link:hover {
+  color: rgb(158, 37, 39);
+}
+
+body.privacy {
+  font-family: "Poppins", sans-serif !important;
+}
+body.privacy header {
+  background-color: rgb(250, 250, 250);
+  padding: 1rem 2rem;
+}
+body.privacy header .logo {
+  width: 200px;
+}
+body.privacy .main {
+  background-color: rgba(199, 51, 53, 0.205);
+  padding: 2rem 0;
+}
+body.privacy .main .top h2 {
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+body.privacy .main .bottom {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+body.privacy .main .bottom ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+body.privacy .main .bottom ul li {
+  line-height: 1.4;
+}
+body.privacy .footer {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+body.privacy .footer .footer__link {
+  text-decoration: none;
+  color: rgb(199, 51, 54);
+  transition: all 0.3s ease-in-out;
+}
+body.privacy .footer .footer__link:hover {
+  color: rgb(158, 37, 39);
+}
+
+body.terms {
+  font-family: "Poppins", sans-serif !important;
+}
+body.terms header {
+  background-color: rgb(250, 250, 250);
+  padding: 1rem 2rem;
+}
+body.terms header .logo {
+  width: 200px;
+}
+body.terms .main {
+  background-color: rgba(199, 51, 53, 0.205);
+  padding: 2rem 0;
+}
+body.terms .main .top h2 {
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+body.terms .main .bottom {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+body.terms .main .bottom ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+body.terms .main .bottom ul li {
+  line-height: 1.4;
+}
+body.terms .footer {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+body.terms .footer .footer__link {
+  text-decoration: none;
+  color: rgb(199, 51, 54);
+  transition: all 0.3s ease-in-out;
+}
+body.terms .footer .footer__link:hover {
   color: rgb(158, 37, 39);
 }/*# sourceMappingURL=styles.css.map */

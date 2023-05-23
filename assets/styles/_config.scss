@@ -25,7 +25,7 @@ $pri-color-hover: rgb(158, 37, 39);
 .btn-pri-color {
   background-color: $pri-color !important;
   color: white !important;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     // background-color: white !important;
