@@ -5,7 +5,7 @@ const publishersBtn = document.querySelector(".publishersBtn");
 // const advertisersBtn = document.querySelector(".advertisersBtn");
 const aboutBtn = document.querySelector(".aboutBtn");
 const servicesBtn = document.querySelector(".servicesBtn");
-// const contactBtn = document.querySelector(".contactBtn");
+const contactBtn = document.querySelector(".contactBtn");
 const hamburgerBtn = document.querySelector(".hamburger");
 const sidebarEl = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close__bar");
@@ -40,7 +40,7 @@ window.addEventListener("scroll", function () {
       removeAllActiveClass();
       homeBtn.classList.add("active");
       // publishersBtn.classList.remove("active");
-    } 
+    }
     if (window.pageYOffset >= 500) {
       removeAllActiveClass();
       publishersBtn.classList.add("active");
@@ -49,9 +49,13 @@ window.addEventListener("scroll", function () {
       removeAllActiveClass();
       servicesBtn.classList.add("active");
     }
-    if (window.pageYOffset >=  2500) {
+    if (window.pageYOffset >= 2800) {
       removeAllActiveClass();
       aboutBtn.classList.add("active");
+    }
+    if (window.pageYOffset >= 3500) {
+      removeAllActiveClass();
+      contactBtn.classList.add("active");
     }
   }
 });
@@ -81,7 +85,6 @@ window.addEventListener("resize", function () {
   }
 });
 
-
 // function remove all active class
 function removeAllActiveClass() {
   homeBtn.classList.remove("active");
@@ -89,5 +92,5 @@ function removeAllActiveClass() {
   // advertisersBtn.classList.remove("active");
   aboutBtn.classList.remove("active");
   servicesBtn.classList.remove("active");
-  // contactBtn.classList.remove("active");
+  contactBtn.classList.remove("active");
 }

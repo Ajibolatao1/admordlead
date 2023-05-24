@@ -80,12 +80,14 @@ body.index {
     width: 250px;
     top: 0;
     right: 0;
-    background-color: rgb(250, 250, 250);
+    // background-color: rgb(250, 250, 250);
+    background-color: $bg-color-1;
     z-index: 3;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    color: whitesmoke;
 
     .top {
       height: 130px;
@@ -97,7 +99,7 @@ body.index {
         font-size: 2rem;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
-        color: $pri-color;
+        // color: $pri-color;
         font-weight: 700;
         padding-right: 1rem;
 
@@ -128,7 +130,7 @@ body.index {
             width: 100%;
             display: block;
             text-decoration: none;
-            color: $pri-color;
+            color: whitesmoke;
             transition: all 0.5s ease-in-out;
 
             &:hover {
@@ -385,10 +387,44 @@ body.index {
     }
   }
 
+  // section 7
+  .section__7 {
+    background-color: $bg-color-hover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    .section__7__box {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 800px;
+
+      .title {
+        padding: 1rem;
+        font-size: 1.7rem;
+        color: $pri-color;
+      }
+
+      .contact__icon {
+        a {
+          font-size: 2rem;
+          color: $pri-color !important;
+          transition: all 0.3s ease-in-out;
+          display: block;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
   // footer
   .footer {
     // background-color: rgb(250, 250, 250);
-    background-color: $bg-color-hover;
+    background-color: $bg-color-1;
     display: flex;
     flex-direction: column;
     justify-content: center;
