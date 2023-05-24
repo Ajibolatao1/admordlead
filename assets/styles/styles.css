@@ -374,6 +374,7 @@ body.index .footer .footer__link:hover {
 body.privacy {
   font-family: "Poppins", sans-serif !important;
   background-color: rgb(25, 25, 25) !important;
+  line-height: 2 !important;
   color: whitesmoke;
 }
 body.privacy header {
@@ -402,9 +403,6 @@ body.privacy .main .bottom ul {
   flex-direction: column;
   gap: 0.7rem;
   list-style: none;
-}
-body.privacy .main .bottom ul li {
-  line-height: 1.4;
 }
 body.privacy .main .bottom ul li::before {
   content: "•";
@@ -436,6 +434,7 @@ body.terms {
   font-family: "Poppins", sans-serif !important;
   background-color: rgb(25, 25, 25) !important;
   color: whitesmoke;
+  line-height: 2 !important;
 }
 body.terms header {
   background-color: rgba(54, 53, 53, 0.562);
@@ -463,9 +462,6 @@ body.terms .main .bottom ul {
   flex-direction: column;
   gap: 0.7rem;
   list-style: none;
-}
-body.terms .main .bottom ul li {
-  line-height: 1.4;
 }
 body.terms .main .bottom ul li::before {
   content: "•";
