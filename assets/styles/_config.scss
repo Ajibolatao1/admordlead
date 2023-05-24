@@ -13,6 +13,10 @@ html {
 
 $pri-color: rgba(199, 51, 54, 255);
 $pri-color-hover: rgb(158, 37, 39);
+$bg-color-1: rgb(25, 25, 25);
+$bg-color-hover: rgba(54, 53, 53, 0.562);
+
+
 
 // classes
 .active {
@@ -31,6 +35,11 @@ $pri-color-hover: rgb(158, 37, 39);
     // background-color: white !important;
     background-color: $pri-color-hover !important;
   }
+}
+
+.bg-color-card {
+  background-color: $bg-color-1;
+  
 }
 
 .hide__bar {

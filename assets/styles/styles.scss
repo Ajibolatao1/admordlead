@@ -5,6 +5,8 @@
 body.index {
   font-family: "Poppins", sans-serif !important;
   line-height: 2 !important;
+  background-color: $bg-color-1 !important;
+  color: whitesmoke !important;
   //   position: relative;
 
   //   header
@@ -15,7 +17,7 @@ body.index {
     position: sticky;
     top: 0;
     z-index: 2;
-    background-color: rgb(250, 250, 250);
+    background-color: $bg-color-hover !important;
 
     .left {
       .logo {
@@ -31,7 +33,7 @@ body.index {
           font-size: 2rem;
           cursor: pointer;
           transition: all 0.5s ease-in-out;
-          color: $pri-color;
+          // color: $pri-color;
           font-weight: 700;
 
           &:hover {
@@ -55,11 +57,11 @@ body.index {
           li {
             a {
               text-decoration: none;
-              color: black;
+              color: whitesmoke;
               transition: all 0.5s ease-in-out;
 
               &:hover {
-                color: $pri-color;
+                color: $pri-color-hover;
               }
             }
           }
@@ -174,11 +176,11 @@ body.index {
 
   //   section 2
   .section__2 {
-    background-image: linear-gradient(
-      to bottom right,
-      white,
-      rgba(221, 77, 79, 0.76)
-    );
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   white,
+    //   rgba(221, 77, 79, 0.76)
+    // );
     // min-height: 500px;
     display: flex;
     flex-direction: column;
@@ -187,6 +189,10 @@ body.index {
     padding: 3rem;
     text-align: center;
     gap: 3rem;
+
+    .title {
+      color: $pri-color;
+    }
 
     .desc {
       width: 80%;
@@ -202,7 +208,8 @@ body.index {
 
   // section 3
   .section__3 {
-    background-color: rgb(235, 233, 233);
+    // background-color: rgb(235, 233, 233);
+    background-color: $bg-color-hover;
 
     .cards {
       width: 90%;
@@ -223,16 +230,20 @@ body.index {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         text-align: center;
         transition: all 0.5s ease-in-out;
-        min-height: 250px;
-        
+        min-height: 290px;
+        background-color: $pri-color;
 
         .icon {
           font-size: 2rem;
-          color: $pri-color;
+          color: white;
         }
 
         &:hover {
           transform: scale(1.03);
+        }
+
+        .title {
+          color: $bg-color-1;
         }
       }
     }
@@ -240,11 +251,12 @@ body.index {
 
   // section 4
   .section__4 {
-    background-image: linear-gradient(
-      to bottom right,
-      white,
-      rgba(221, 77, 79, 0.76)
-    );
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   white,
+    //   rgba(221, 77, 79, 0.76)
+    // );
+    background-color: $bg-color-1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,6 +270,7 @@ body.index {
         text-align: center;
         padding: 1rem;
         font-size: 1.7rem;
+        color: $pri-color;
       }
 
       .sub__title {
@@ -273,7 +286,8 @@ body.index {
 
   // section 5
   .section__5 {
-    background-color: rgb(235, 233, 233);
+    // background-color: rgb(235, 233, 233);
+    background-color: $bg-color-hover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,6 +301,7 @@ body.index {
         text-align: center;
         padding: 1rem;
         font-size: 1.7rem;
+        color: $pri-color;
       }
 
       .desc__box {
@@ -300,7 +315,11 @@ body.index {
           gap: 1rem;
           max-width: 500px;
           // background: #6e6b6b;
-          min-height: 200px;
+          min-height: 250px;
+          background-color: $bg-color-1;
+          padding: 1rem;
+          border-radius: 10px;
+          // min-height: 150px;
 
           .left {
             font-size: 2.5rem;
@@ -311,6 +330,7 @@ body.index {
             .top {
               font-size: 1.3rem;
               padding-bottom: 0.5rem;
+              color: $pri-color;
               // font-weight: bold;
             }
           }
@@ -321,12 +341,12 @@ body.index {
 
   // section 6
   .section__6 {
-    background-image: linear-gradient(
-      to bottom right,
-      white,
-      rgba(221, 77, 79, 0.76)
-    );
-
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   white,
+    //   rgba(221, 77, 79, 0.76)
+    // );
+    background-color: $bg-color-1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,6 +360,7 @@ body.index {
         text-align: center;
         padding: 1rem;
         font-size: 1.7rem;
+        color: $pri-color;
       }
 
       .desc__box {
@@ -366,7 +387,8 @@ body.index {
 
   // footer
   .footer {
-    background-color: rgb(250, 250, 250);
+    // background-color: rgb(250, 250, 250);
+    background-color: $bg-color-hover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -389,9 +411,11 @@ body.index {
 // PRIVACY
 body.privacy {
   font-family: "Poppins", sans-serif !important;
+  background-color: $bg-color-1 !important;
+  color: whitesmoke;
   // HEADER
   header {
-    background-color: rgb(250, 250, 250);
+    background-color: $bg-color-hover;
     padding: 1rem 2rem;
 
     .logo {
@@ -400,7 +424,7 @@ body.privacy {
   }
   // MAIN
   .main {
-    background-color: rgba(199, 51, 53, 0.205);
+    // background-color: rgba(199, 51, 53, 0.205);
     padding: 2rem 0;
 
     .top {
@@ -408,6 +432,7 @@ body.privacy {
         letter-spacing: 1px;
         text-align: center;
         padding: 1.5rem 0;
+        color: $pri-color;
       }
     }
 
@@ -420,9 +445,19 @@ body.privacy {
         display: flex;
         flex-direction: column;
         gap: 0.7rem;
+        list-style: none;
 
         li {
           line-height: 1.4;
+
+          &::before {
+            content: "\2022";
+            color: $pri-color;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
         }
       }
     }
@@ -430,7 +465,8 @@ body.privacy {
 
   // footer
   .footer {
-    background-color: rgb(250, 250, 250);
+    // background-color: rgb(250, 250, 250);
+    background-color: $bg-color-hover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -453,9 +489,12 @@ body.privacy {
 // PRIVACY
 body.terms {
   font-family: "Poppins", sans-serif !important;
+  background-color: $bg-color-1 !important;
+  color: whitesmoke;
   // HEADER
   header {
-    background-color: rgb(250, 250, 250);
+    // background-color: rgb(250, 250, 250);
+    background-color: $bg-color-hover;
     padding: 1rem 2rem;
 
     .logo {
@@ -465,7 +504,7 @@ body.terms {
   // MAIN
   // MAIN
   .main {
-    background-color: rgba(199, 51, 53, 0.205);
+    // background-color: rgba(199, 51, 53, 0.205);
     padding: 2rem 0;
 
     .top {
@@ -473,6 +512,7 @@ body.terms {
         letter-spacing: 1px;
         text-align: center;
         padding: 1.5rem 0;
+        color: $pri-color;
       }
     }
 
@@ -485,9 +525,18 @@ body.terms {
         display: flex;
         flex-direction: column;
         gap: 0.7rem;
+        list-style: none;
 
         li {
           line-height: 1.4;
+          &::before {
+            content: "\2022";
+            color: $pri-color;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
         }
       }
     }
@@ -495,7 +544,8 @@ body.terms {
 
   // footer
   .footer {
-    background-color: rgb(250, 250, 250);
+    // background-color: rgb(250, 250, 250);
+    background-color: $bg-color-hover;
     display: flex;
     flex-direction: column;
     justify-content: center;
